@@ -18,3 +18,7 @@ For each test, capture the source VM, destination, port, Network Watcher result,
 - `terraform plan` after apply to check for drift
 - `az network watcher test-connectivity` for path diagnostics
 - `az network nic list-effective-nsg` and `az network nic show-effective-route-table` for VM NIC inspection
+
+## Deployment timing worksheet
+
+Record five independent runs with start/end timestamps, Terraform version, Azure region, resource counts, and whether the post-apply plan is empty. Compare against a separately timed portal baseline. Avoid presenting a single run as a repeatable benchmark.
