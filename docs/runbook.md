@@ -8,3 +8,7 @@
 6. Apply the smallest corrective change, rerun the test, then run `terraform plan` to ensure configuration and state agree.
 
 Never solve a connectivity issue by opening all ports to the Internet. Prefer narrow source ranges and required destination ports.
+
+## VPN gateway extension
+
+The optional module creates the hub VPN gateway public IP and gateway. A production VNet-to-VNet connection additionally requires a remote gateway, connection resource, and securely managed shared key on both ends. Keep shared keys in Key Vault or a protected CI secret; do not place them in tfvars or source control. Confirm both address spaces are non-overlapping before establishing the connection.
